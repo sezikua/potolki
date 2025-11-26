@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -48,7 +49,15 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/logo.png"
+              alt="Labell - Натяжні стелі"
+              width={40}
+              height={40}
+              className="object-contain"
+              priority
+            />
             <span className="text-2xl font-bold text-primary-500">Labell</span>
             <span className="hidden sm:inline text-sm text-gray-600">Натяжні стелі</span>
           </Link>

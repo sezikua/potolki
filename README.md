@@ -97,7 +97,7 @@ npm start
 ```typescript
 export const siteConfig: SiteConfig = {
   contact: {
-    phone: '+380501234567',
+    phone: '+380505651511',
     email: 'info@labell.kiev.ua',
     // ...
   },

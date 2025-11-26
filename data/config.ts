@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   url: 'https://labell.kiev.ua',
   ogImage: '/og-image.jpg',
   contact: {
-    phone: '+380501234567',
+    phone: '+380505651511',
     email: 'info@labell.kiev.ua',
     address: {
       street: 'вул. Хрещатик, 1',
@@ -18,9 +18,9 @@ export const siteConfig: SiteConfig = {
       facebook: 'https://facebook.com/labell.ceilings',
       instagram: 'https://instagram.com/labell_ceilings',
       youtube: 'https://youtube.com/@labellceilings',
-      viber: 'viber://chat?number=380501234567',
-      telegram: 'https://t.me/labellceilings',
-      whatsapp: 'https://wa.me/380501234567',
+      viber: 'viber://chat?number=380505651511',
+      telegram: 'https://t.me/grooth_io',
+      whatsapp: 'https://wa.me/380505651511',
     },
   },
 };

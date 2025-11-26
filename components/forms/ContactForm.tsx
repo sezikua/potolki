@@ -102,7 +102,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         label="Телефон *"
         {...register('phone')}
         error={errors.phone?.message}
-        placeholder="+380501234567"
+        placeholder="+380505651511"
         type="tel"
       />
 

@@ -91,7 +91,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({ isOpen, onClose }) =
               label="Телефон *"
               {...register('phone')}
               error={errors.phone?.message}
-              placeholder="+380501234567"
+              placeholder="+380505651511"
               type="tel"
             />
 
