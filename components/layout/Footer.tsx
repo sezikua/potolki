@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { siteConfig } from '@/data/config';
 import { formatPhoneNumber } from '@/lib/utils';
@@ -41,7 +42,15 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">Labell</h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.png"
+                alt="Labell - Натяжні стелі"
+                width={200}
+                height={100}
+                className="object-contain h-20 md:h-24 w-auto"
+              />
+            </Link>
             <p className="text-sm mb-4">Натяжні стелі в Києві та Україні. Понад 16 років досвіду.</p>
             <div className="space-y-2 text-sm">
               <a

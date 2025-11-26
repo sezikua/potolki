@@ -49,17 +49,15 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="Labell - Натяжні стелі"
-              width={40}
-              height={40}
-              className="object-contain"
+              width={180}
+              height={90}
+              className="object-contain h-14 md:h-16 w-auto"
               priority
             />
-            <span className="text-2xl font-bold text-primary-500">Labell</span>
-            <span className="hidden sm:inline text-sm text-gray-600">Натяжні стелі</span>
           </Link>
 
           {/* Desktop Navigation */}
