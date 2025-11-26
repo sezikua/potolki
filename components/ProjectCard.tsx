@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Clock } from 'lucide-react';
 import { Project } from '@/types';
 import { Card } from '@/components/ui/Card';
-import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   project: Project;

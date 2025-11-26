@@ -11,7 +11,7 @@ import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { services } from '@/data/services';
-import { CeilingType, RoomType } from '@/types';
+import { CeilingType } from '@/types';
 
 const calculatorSchema = z.object({
   area: z.number().min(1, 'Площа повинна бути більше 0'),
@@ -44,8 +44,6 @@ export const Calculator: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
-  const [showContactForm, setShowContactForm] = useState(false);
 
   const {
     register,
@@ -64,12 +62,8 @@ export const Calculator: React.FC = () => {
   const area = watch('area') || 20;
   const ceilingType = watch('ceilingType') as CeilingType;
 
-  const calculatePrice = (data: CalculatorFormData) => {
-    const range = priceRanges[data.ceilingType];
-    const avgPrice = (range.min + range.max) / 2;
-    const totalPrice = avgPrice * data.area;
-    setEstimatedPrice(totalPrice);
-    setShowContactForm(true);
+  const calculatePrice = (_data: CalculatorFormData) => {
+    // Ця функція використовується для обробки форми, але розрахунок відбувається в реальному часі
   };
 
   const ceilingTypeOptions = services.map((service) => ({

@@ -53,7 +53,8 @@ export const Analytics: React.FC<AnalyticsProps> = ({
     window.gtag('config', gaId, {
       page_path: url,
     });
-  }, [pathname, searchParams, gaId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname, searchParams]);
 
   if (!gaId) return null;
 

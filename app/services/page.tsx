@@ -12,7 +12,8 @@ export const metadata = generateMetadata({
   description: 'Повний перелік послуг Labell: глянцеві, матові, сатинові стелі, фотодрук, парящі та комбіновані стелі.',
 });
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const iconMap: Record<string, React.ComponentType<any>> = {
   sparkles: Sparkles,
   layers: Layers,
   palette: Palette,

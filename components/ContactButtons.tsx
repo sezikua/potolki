@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Phone, MessageCircle, Mail } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/data/config';
 import { cn } from '@/lib/utils';
 
@@ -30,9 +30,6 @@ export const ContactButtons: React.FC<ContactButtonsProps> = ({
     window.open(siteConfig.contact.social.whatsapp, '_blank');
   };
 
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${siteConfig.contact.email}`;
-  };
 
   if (variant === 'floating') {
     return (
