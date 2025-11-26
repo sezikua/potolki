@@ -53,9 +53,9 @@ export const Header: React.FC = () => {
             <Image
               src="/logo.png"
               alt="Labell - Натяжні стелі"
-              width={180}
-              height={90}
-              className="object-contain h-14 md:h-16 w-auto"
+              width={225}
+              height={112}
+              className="object-contain h-[70px] md:h-20 w-auto"
               priority
             />
           </Link>
