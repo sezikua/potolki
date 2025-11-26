@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 declare global {
@@ -14,9 +14,7 @@ interface AnalyticsProps {
   gaId?: string;
 }
 
-export const Analytics: React.FC<AnalyticsProps> = ({
-  gaId = process.env.NEXT_PUBLIC_GA_ID,
-}) => {
+const AnalyticsContent: React.FC<{ gaId?: string }> = ({ gaId }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -41,7 +39,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
     gtag('config', gaId, {
       page_path: pathname,
     });
-  }, [gaId]);
+  }, [gaId, pathname]);
 
   useEffect(() => {
     // Track page views
@@ -53,12 +51,21 @@ export const Analytics: React.FC<AnalyticsProps> = ({
     window.gtag('config', gaId, {
       page_path: url,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, searchParams]);
-
-  if (!gaId) return null;
+  }, [pathname, searchParams, gaId]);
 
   return null;
+};
+
+export const Analytics: React.FC<AnalyticsProps> = ({
+  gaId = process.env.NEXT_PUBLIC_GA_ID,
+}) => {
+  if (!gaId) return null;
+
+  return (
+    <Suspense fallback={null}>
+      <AnalyticsContent gaId={gaId} />
+    </Suspense>
+  );
 };
 
 // Helper function to track events
