@@ -63,7 +63,8 @@ export const Calculator: React.FC = () => {
   const ceilingType = watch('ceilingType') as CeilingType;
 
   const calculatePrice = (_data: CalculatorFormData) => {
-    // Ця функція використовується для обробки форми, але розрахунок відбувається в реальному часі
+    // Розрахунок відбувається в реальному часі через watch, ця функція залишена для сумісності
+    return;
   };
 
   const ceilingTypeOptions = services.map((service) => ({
